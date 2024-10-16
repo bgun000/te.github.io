@@ -30,7 +30,7 @@
 
 /* ปรับแต่ง footer */
 footer {
-    background-color::MediumSeaGreen;">MediumSeaGreen</h1>/* สีพื้นหลังของ footer */
+    background-color:rgb(60, 179, 113)/* สีพื้นหลังของ footer */
     color: #ffffff; /* สีของข้อความใน footer */
 }
 
@@ -40,5 +40,5 @@ footer {
 }
 
 .btn-primary:hover {
-    background-color:"background-color:Gray;">Gray</h1> /* สีเมื่อ hover */
+    background-color:rgb(60, 60, 60) /* สีเมื่อ hover */
 }
