@@ -1,3 +1,10 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -5,16 +12,13 @@
     align-items: center;
     background-color: #333;
     color: #fff;
-    padding: 10px 0; /* padding ด้านบนและด้านล่าง */
-    margin: 0; /* ปรับให้ชิดขอบ */
+    padding: 10px 20px;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .navbar-logo {
     font-size: 1.5em;
     font-weight: bold;
-    padding-left: 20px; /* เพิ่ม padding ให้โลโก้อยู่ไม่ชิดขอบซ้ายเกินไป */
 }
 
 .navbar-links a {
@@ -26,14 +30,6 @@
 .navbar-links a:hover {
     color: #ddd;
 }
-
-/* Social icons */
-.social-icon img {
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
-}
-
 
 /* Social icons */
 .social-icon img {
