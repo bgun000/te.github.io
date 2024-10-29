@@ -5,15 +5,16 @@
     align-items: center;
     background-color: #333;
     color: #fff;
-    padding: 10px 0; /* ตั้ง padding ด้านบนและด้านล่างเพื่อให้ไม่ชิดมากเกินไป */
-    margin: 0;
-    width: 100%; /* ขยายเต็มความกว้างหน้าจอ */
-    box-sizing: border-box; /* ช่วยให้ padding ไม่กระทบความกว้าง */
+    padding: 10px 0; /* padding ด้านบนและด้านล่าง */
+    margin: 0; /* ปรับให้ชิดขอบ */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .navbar-logo {
     font-size: 1.5em;
     font-weight: bold;
+    padding-left: 20px; /* เพิ่ม padding ให้โลโก้อยู่ไม่ชิดขอบซ้ายเกินไป */
 }
 
 .navbar-links a {
@@ -25,6 +26,14 @@
 .navbar-links a:hover {
     color: #ddd;
 }
+
+/* Social icons */
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
 
 /* Social icons */
 .social-icon img {
