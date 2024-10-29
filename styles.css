@@ -57,12 +57,14 @@
     text-align: center;
     padding: 15px;
     box-sizing: border-box;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Hover transition */
 }
 
 .store-item img {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
 .store-item h3 {
@@ -75,12 +77,8 @@
     color: #666;
 }
 
-/* ตั้งค่าเบื้องต้นสำหรับรูปภาพและปุ่ม */
-.product-item img {
-    transition: transform 0.3s ease;
-}
-
-.product-item button {
+/* Button style */
+.store-item button {
     background-color: #28a745;
     color: white;
     border: none;
@@ -89,24 +87,16 @@
     transition: background-color 0.3s ease;
 }
 
-.product-item button:hover {
+.store-item button:hover {
     background-color: #218838;
 }
 
-/* เอฟเฟกต์ hover สำหรับรูปภาพ */
-.product-item:hover img {
-    transform: scale(1.1); /* ขยายเล็กน้อย */
+/* เอฟเฟกต์ hover สำหรับการ์ดและรูปภาพ */
+.store-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* เพิ่มเงาเมื่อ hover */
+    transform: translateY(-5px); /* ขยับการ์ดขึ้นเล็กน้อย */
 }
 
-/* เอฟเฟกต์ hover สำหรับการ์ดสินค้า */
-.product-item {
-    border: 1px solid #ddd;
-    padding: 15px;
-    transition: box-shadow 0.3s ease;
-    text-align: center;
+.store-item:hover img {
+    transform: scale(1.05); /* ขยายรูปภาพเล็กน้อย */
 }
-
-.product-item:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงาเมื่อ hover */
-}
-
