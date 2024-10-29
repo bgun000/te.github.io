@@ -8,18 +8,10 @@
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-logo">โลโก้ร้านค้า</div>
-        <div class="navbar-links">
-            <a href="#">หน้าแรก</a>
-            <a href="#">สินค้า</a>
-            <a href="#">ติดต่อเรา</a>
-            <!-- ไอคอน Facebook และ Instagram -->
-            <a href="https://facebook.com" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="https://instagram.com" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a>
-        </div>
-    </nav>
+    <header style="background-color: white;">
+        <h1>ยินดีต้อนรับสู่ Ploy Shop</h1>
+        <div id="navbar-placeholder"></div>
+    </header>
 
     <!-- Store Content -->
     <div class="store-container">
@@ -54,6 +46,28 @@
             <p>คำอธิบายสินค้า</p>
         </div>
     </div>
+
+     <div id="footer-placeholder"></div> <!-- Footer placeholder --> 
+    <!-- Navbar & Footer Scripts -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        // Toast Function for Order Confirmation
+        function showOrderToast() {
+            var toastElement = document.getElementById('orderToast');
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
+        }
+    </script>
 
 </body>
 </html>
