@@ -32,7 +32,6 @@
 /* Link Animation Underline */
 .navbar-nav .nav-link::after {
     content: "";
-    display: block;
     width: 0;
     height: 2px;
     background: #ffc107;
