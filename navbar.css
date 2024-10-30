@@ -1,71 +1,70 @@
-/* Navbar Styles */
+/* navbar.css */
+
+/* Basic reset for navbar */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar container */
 .navbar {
-    background-color: #004085;
-    padding: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff; /* สีพื้นหลังของ navbar */
+    padding: 10px 20px;
 }
 
-.navbar-brand {
-    font-size: 1.5rem;
+/* Logo styling */
+.navbar-logo img {
+    height: 50px; /* ปรับขนาดของโลโก้ */
+}
+
+/* Navbar links */
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* เว้นระยะระหว่างลิงก์ */
+}
+
+.navbar-links li {
+    display: inline;
+}
+
+/* Navbar link styling */
+.navbar-links a {
+    color: white; /* สีของข้อความ */
+    text-decoration: none; /* ลบขีดเส้นใต้ */
     font-weight: bold;
-    color: #ffffff;
-    transition: color 0.3s ease;
 }
 
-.navbar-brand:hover {
-    color: #d4d4d4;
-    text-decoration: none;
+.navbar-links a:hover {
+    text-decoration: underline; /* ขีดเส้นใต้เมื่อชี้เมาส์ */
 }
 
-.navbar-nav .nav-item .nav-link {
-    color: #ffffff;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s ease;
-    font-size: 1.1rem;
+/* Button styling */
+.btn {
+    background-color: #28a745; /* สีพื้นหลังของปุ่ม */
+    color: white; /* สีข้อความในปุ่ม */
+    border: none; /* ลบเส้นขอบ */
+    padding: 10px 20px;
+    border-radius: 5px; /* ทำมุมมนให้ปุ่ม */
+    cursor: pointer;
 }
 
-.navbar-nav .nav-item .nav-link:hover {
-    background-color: #0056b3;
-    color: #ffffff;
+.btn:hover {
+    background-color: #218838; /* เปลี่ยนสีเมื่อชี้เมาส์ */
 }
 
-.navbar-nav .nav-item .nav-link.active {
-    background-color: #003366;
-    color: #ffffff;
-}
-
-.navbar-toggler {
-    border-color: #ffffff;
-}
-
-.navbar-toggler-icon {
-    color: #ffffff;
-}
-
-@media (max-width: 992px) {
-    .navbar-collapse {
-        background-color: #004085;
-        padding: 15px;
-        border-radius: 5px;
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* เปลี่ยนการจัดเรียงเมื่อหน้าจอเล็กลง */
+        align-items: flex-start; /* จัดแนวซ้าย */
     }
-}
 
-/* Dropdown Styles */
-.navbar .dropdown-menu {
-    background-color: #004085;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.navbar .dropdown-item {
-    color: #ffffff;
-    transition: background-color 0.3s ease;
-}
-
-.navbar .dropdown-item:hover {
-    background-color: #0056b3;
-    color: #ffffff;
+    .navbar-links {
+        flex-direction: column; /* แสดงลิงก์ในแนวตั้ง */
+        margin-top: 10px;
+    }
 }
