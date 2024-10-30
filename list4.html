@@ -22,15 +22,30 @@
         </div>
         <p class="product-description mt-3 text-center">RAM (แรม) PREDATOR HERMES RGB 32GB (16x2) DDR5 6400Mhz BLACK (BL.9BWWR.391) (LT)</p>
         <div class="text-center">
-            <button onclick="history.back()" class="btn btn-secondary ms-2 btn-back">
-                <i class="bi bi-arrow-left-circle me-1"></i> ย้อนกลับ
-            </button>
+            <button class="btn btn-primary" onclick="showOrderToast()">สั่งซื้อ</button>
+               <button onclick="history.back()" class="btn btn-secondary ms-2 btn-back">
+                    <i class="bi bi-arrow-left-circle me-1"></i> ย้อนกลับ
+                </button>
+            </div>
+        </div>
+
+          <!-- Toast สำหรับแจ้งเตือน -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="orderToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    การสั่งซื้อของคุณสำเร็จแล้ว!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
         </div>
     </div>
 
-    <div id="footer-placeholder"></div> <!-- Footer placeholder --> 
+    <div id="footer-placeholder"></div>
 
+    <!-- Navbar & Footer Scripts -->
     <script>
+        // Load navbar and footer
         fetch('navbar.html')
             .then(response => response.text())
             .then(data => {
@@ -41,6 +56,13 @@
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
+
+        // Toast Function for Order Confirmation
+        function showOrderToast() {
+            var toastElement = document.getElementById('orderToast');
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
+        }
     </script>
 
 </body>
