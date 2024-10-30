@@ -1,70 +1,78 @@
-/* navbar.css */
-
-/* Basic reset for navbar */
-body, h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
-}
-
-/* Navbar container */
+/* Navbar Styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #007bff; /* สีพื้นหลังของ navbar */
-    padding: 10px 20px;
+    background: linear-gradient(45deg, #007bff, #1e90ff, #87ceeb); /* สีไล่เฉด */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* เงา */
 }
 
-/* Logo styling */
-.navbar-logo img {
-    height: 50px; /* ปรับขนาดของโลโก้ */
-}
-
-/* Navbar links */
-.navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 15px; /* เว้นระยะระหว่างลิงก์ */
-}
-
-.navbar-links li {
-    display: inline;
-}
-
-/* Navbar link styling */
-.navbar-links a {
-    color: white; /* สีของข้อความ */
-    text-decoration: none; /* ลบขีดเส้นใต้ */
+.navbar-brand {
     font-weight: bold;
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
 }
 
-.navbar-links a:hover {
-    text-decoration: underline; /* ขีดเส้นใต้เมื่อชี้เมาส์ */
+.navbar-brand:hover {
+    color: #ffc107; /* สีเมื่อ hover */
+    text-shadow: 0px 0px 5px #ffffff; /* เงา */
 }
 
-/* Button styling */
-.btn {
-    background-color: #28a745; /* สีพื้นหลังของปุ่ม */
-    color: white; /* สีข้อความในปุ่ม */
-    border: none; /* ลบเส้นขอบ */
-    padding: 10px 20px;
-    border-radius: 5px; /* ทำมุมมนให้ปุ่ม */
-    cursor: pointer;
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
 }
 
-.btn:hover {
-    background-color: #218838; /* เปลี่ยนสีเมื่อชี้เมาส์ */
+.navbar-nav .nav-link:hover {
+    color: #ffc107; /* เปลี่ยนสีเมื่อ hover */
+    transform: scale(1.1); /* ขยายเล็กน้อย */
 }
 
-/* Responsive styles */
+/* Link Animation Underline */
+.navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffc107;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* แสดงเส้นใต้เมื่อ hover */
+}
+
+/* Toggler Icon Customization */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%280, 0, 0, 0.5%29" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Mobile Dropdown Background */
+.navbar-collapse {
+    background: linear-gradient(45deg, #007bff, #1e90ff, #87ceeb);
+}
+
+/* Active Link */
+.navbar-nav .nav-link.active {
+    color: #ffc107; /* สี link เมื่ออยู่ในหน้านั้น */
+}
+
+/* Responsive Text Sizing */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* เปลี่ยนการจัดเรียงเมื่อหน้าจอเล็กลง */
-        align-items: flex-start; /* จัดแนวซ้าย */
+    .navbar-brand {
+        font-size: 1.25rem;
     }
-
-    .navbar-links {
-        flex-direction: column; /* แสดงลิงก์ในแนวตั้ง */
-        margin-top: 10px;
+    .navbar-nav .nav-link {
+        font-size: 1rem;
     }
 }
