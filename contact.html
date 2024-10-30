@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* รีเซ็ตค่าเริ่มต้น */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* การตั้งค่าทั่วไป */
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 5% auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-header {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-control, .btn-primary {
+            border-radius: 30px;
+        }
+
+        .btn-primary {
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #1a73e8;
+        }
+
+        /* ส่วนไอคอน */
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #1a73e8;
+        }
+
+.btn-back {
+    font-size: 1rem; /* ขนาดตัวอักษร */
+    padding: 10px 20px; /* ระยะห่างภายในปุ่ม */
+    border-radius: 30px; /* มุมปุ่มโค้ง */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* การเปลี่ยนแปลงสีพื้นหลังและขนาดเมื่อมีการโฮเวอร์ */
+    background-color: #6c757d; /* สีพื้นหลังเริ่มต้น */
+    color: #fff; /* สีตัวอักษร */
+}
+
+.btn-back i {
+    font-size: 1.2rem; /* ขนาดไอคอน */
+    vertical-align: middle; /* จัดแนวแนวดิ่งให้ตรงกลาง */
+}
+
+.btn-back:hover {
+    background-color: #5a6268; /* สีพื้นหลังเมื่อโฮเวอร์ */
+    transform: scale(1.05); /* ขยายขนาดเมื่อโฮเวอร์ */
+}
+
+      
+    </style>
+</head>
+<body>
+
+    <header style="background-color: white;">
+        <div id="navbar-placeholder"></div>
+    </header>
+  
+    <div class="contact-container">
+        <h2 class="contact-header">Contact Us</h2>
+        <p class="text-center text-muted mb-4">กรุณากรอกข้อมูลด้านล่างและเราจะติดต่อกลับให้เร็วที่สุด</p>
+        
+        <form action="contact_back.php" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">ชื่อของคุณ</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">อีเมล</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="subject" class="form-label">หัวข้อ</label>
+                <input type="text" class="form-control" id="subject" name="subject" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">ข้อความ</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">ส่งข้อความ</button>
+        </form>
+
+        <!-- ส่วนไอคอนโซเชียลมีเดีย -->
+        <div class="social-icons">
+            <h5>ติดตามเราได้ที่:</h5>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      
+      <button onclick="history.back()" class="btn btn-secondary ms-2 btn-back">
+            <i class="bi bi-arrow-left-circle me-1"></i> ย้อนกลับ
+      </button> 
+      
+    </div>
+  
+  
+     <div id="footer-placeholder"></div> <!-- Footer placeholder --> 
+    <!-- Navbar & Footer Scripts -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+    </script>
+
+</body>
+</html>
