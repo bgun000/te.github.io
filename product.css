@@ -8,59 +8,70 @@
 
 /* จัดสไตล์พื้นหลัง */
 body {
-    background-color: #f4f4f9;
+    background-color: #f3f6fa;
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px;
 }
 
 /* การจัดวางสินค้า */
 .product-container {
     background-color: #ffffff;
     padding: 30px;
-    border-radius: 10px;
-    max-width: 600px;
+    border-radius: 12px;
+    max-width: 700px;
     width: 100%;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-container:hover {
+    transform: scale(1.01);
 }
 
 /* หัวข้อสินค้า */
 .product-container h1 {
     font-size: 2rem;
-    color: #333333;
+    color: #222;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 /* ส่วนรูปภาพสินค้า */
 .product-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 /* คำอธิบายสินค้า */
 .product-description {
     font-size: 1rem;
-    color: #555555;
-    line-height: 1.5;
+    color: #555;
+    line-height: 1.6;
     margin: 20px 0;
+    padding: 0 10px;
 }
 
 /* การจัดสไตล์ปุ่ม */
 .button-group .btn {
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 1rem;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    margin: 0 5px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .button-group .btn-success {
     background-color: #28a745;
     color: #fff;
+    border: none;
 }
 
 .button-group .btn-success:hover {
@@ -71,6 +82,7 @@ body {
 .button-group .btn-secondary {
     background-color: #6c757d;
     color: #fff;
+    border: none;
 }
 
 .button-group .btn-secondary:hover {
@@ -87,6 +99,7 @@ body {
     background-color: #343a40;
     color: #fff;
     font-weight: bold;
+    border-radius: 5px 5px 0 0;
 }
 
 .toast-body {
