@@ -63,3 +63,21 @@ body {
 .btn:hover {
     background-color: #2980b9;
 }
+/* ปรับแต่งปุ่มย้อนกลับ */
+.btn-back {
+    font-size: 1rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-back i {
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+.btn-back:hover {
+    background-color: #5a6268;
+    color: #fff;
+    transform: scale(1.05);
+}
